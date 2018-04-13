@@ -39,4 +39,14 @@ helloWorldArrow();
 helloWorldArrow("welcome");
 helloWorldArrow("welcome", "to hell");
 
+let array = {
+    order: ["one", "two", "three", "four", "five"],
+    print: function (delay = 1000) {
+        setTimeout(() => {
+            console.log(this.order.join(","));
+        }, delay)
+    }
+};
+array.print();
+
 console.log('--------------------------------------------------------------------------------------------------------');
