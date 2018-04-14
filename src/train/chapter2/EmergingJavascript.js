@@ -49,4 +49,24 @@ let array = {
 };
 array.print();
 
+console.log('-------------------------------------------DESTRUCTING-ASSIGNMENT---------------------------------------');
+
+let sandwitch = {
+  bread: "duthc crunch",
+  meat: "tuna",
+  cheese: "swiss",
+  toppings: ["lettuce", "tomato", "mustard"]
+};
+
+//console.log(bread, meat);//ReferenceError: bread is not defined
+
+let {bread, meat} = sandwitch;
+console.log(bread, meat);
+
+bread = "garlic";
+meat = "turkey";
+
+console.log(bread, meat);
+console.log(sandwitch.bread, sandwitch.meat);
+
 console.log('--------------------------------------------------------------------------------------------------------');
