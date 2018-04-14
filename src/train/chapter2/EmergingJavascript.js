@@ -52,10 +52,10 @@ array.print();
 console.log('-------------------------------------------DESTRUCTING-ASSIGNMENT---------------------------------------');
 
 let sandwitch = {
-  bread: "duthc crunch",
-  meat: "tuna",
-  cheese: "swiss",
-  toppings: ["lettuce", "tomato", "mustard"]
+    bread: "duthc crunch",
+    meat: "tuna",
+    cheese: "swiss",
+    toppings: ["lettuce", "tomato", "mustard"]
 };
 
 //console.log(bread, meat);//ReferenceError: bread is not defined
@@ -68,5 +68,17 @@ meat = "turkey";
 
 console.log(bread, meat);
 console.log(sandwitch.bread, sandwitch.meat);
+
+console.log('------------------------------------------OBJECT-LITERAL-ENHANCEMENT------------------------------------');
+
+let name = "Tallac";
+let elevation = 6666;
+let print = function () {
+    console.log(`Mt. ${this.name} is ${this.elevation} feet tall`)
+};
+
+print();//Mt. undefined is undefined feet tall
+let funHike = {name, elevation, print};
+funHike.print();//Mt. Tallac is 6666 feet tall
 
 console.log('--------------------------------------------------------------------------------------------------------');
