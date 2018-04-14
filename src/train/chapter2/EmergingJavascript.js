@@ -77,8 +77,27 @@ let print = function () {
     console.log(`Mt. ${this.name} is ${this.elevation} feet tall`)
 };
 
-print();//Mt. undefined is undefined feet tall
+// print();//TypeError: Cannot read property 'name' of undefined
 let funHike = {name, elevation, print};
 funHike.print();//Mt. Tallac is 6666 feet tall
+
+console.log('------------------------------------------SPREAD-OPERATOR-----------------------------------------------');
+
+let lakes = ["Donner", "Marlette", "Fallen Leaf", "Cascade"];
+let [first, second, ...rest] = lakes;
+console.log(`first: ${first}`);
+console.log(`second: ${second}`);
+console.log(rest.join(','));
+
+let person = {
+    pFirsName: "Maxim",
+    pSecondName: "Nikiforov"
+};
+let pMiddleName = "Olegovich";
+let pFullName = {
+    ...person,
+    pMiddleName
+};
+console.log(pFullName);
 
 console.log('--------------------------------------------------------------------------------------------------------');
