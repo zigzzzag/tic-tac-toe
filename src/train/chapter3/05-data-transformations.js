@@ -96,3 +96,39 @@ console.log(`maxAge is ${maxAge}`);
 
 const maxAge2 = ages.reduce((max, age) => (max > age) ? max : age);
 console.log(`maxAge2 is ${maxAge2}`);
+
+const colors = [{
+    id: '-xekare',
+    title: "rad red",
+    rating: 3
+}, {
+    id: '-jbwsof',
+    title: "big blue",
+    rating: 2
+}, {
+    id: '-prigbj',
+    title: "grizzly grey",
+    rating: 5
+}, {
+    id: '-ryhbhsl',
+    title: "banana",
+    rating: 1
+}];
+
+const hashColors = colors.reduce(
+    (hash, {id, title, rating}) => {
+        hash[id] = {title, rating};
+        return hash
+    },
+    {}
+);
+console.log(hashColors);
+
+const colorsNew = ["red", "red", "green", "blue", "green"];
+
+const distinctColors = colorsNew.reduce(
+    (distinct, color) => (distinct.indexOf(color) !== -1) ? distinct : [...distinct, color],
+    []);
+
+console.log(colorsNew);
+console.log(distinctColors);
